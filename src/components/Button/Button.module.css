@@ -1,0 +1,27 @@
+.buttonContainer {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.buttonContainer::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 3px;
+  background: #000;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+}
+.buttonImg {
+  max-width: 200px;
+}
+.reverseStyles {
+  justify-content: flex-end;
+}
+.reverseStyles::before {
+  left: auto;
+  right: 25%;
+}
