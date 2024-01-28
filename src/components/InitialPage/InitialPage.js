@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "./InitialPage.module.css";
 
-import Button from "../Button/Button";
-import { buttonImg } from "../../images";
-const InitialPage = ({ title, img, icon, totalSteps }) => {
+const InitialPage = ({ title, img, icon, totalSteps, buttonImg }) => {
   return (
     <section className={styles.mainWrapper}>
-      <img src={icon} alt="#" className={styles.icon} />
+      <div className={styles.icon}>{icon}</div>
       <div className={styles.wrapper}>
         <h2 className={styles.steps}>{totalSteps}</h2>
         <h2
@@ -21,7 +19,7 @@ const InitialPage = ({ title, img, icon, totalSteps }) => {
             <div className={styles.circle}></div>{" "}
             <div className={styles.circle}></div>
           </div>{" "}
-          <img src={buttonImg} alt="#" className={styles.buttonImg} />
+          <div className={styles.buttonImg}>{buttonImg}</div>
         </div>
       </div>
     </section>

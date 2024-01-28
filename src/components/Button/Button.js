@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./Button.module.css";
-import { buttonImg } from "../../images";
-const Button = ({ onClick, id }) => {
+
+const Button = ({ onClick, id, buttonImg }) => {
   return (
     <div
       className={[
         styles.buttonContainer,
         id % 2 === 0 && styles.reverseStyles,
       ].join(" ")}
+      onClick={onClick}
     >
-      <img src={buttonImg} alt="#" className={styles.buttonImg} />
+      <div className={styles.buttonImg}>{buttonImg}</div>
     </div>
   );
 };
